@@ -17,4 +17,4 @@
 //     console.log(res);
 //   })
 //   .catch((e) => console.log(e))
-//   .finally(() => knex.destroy());
+// .finally(() => knex.destroy());
