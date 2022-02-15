@@ -32,7 +32,7 @@ const server = new ApolloServer({
   },
 });
 
-const port = process.env.PORT | 4003;
+const port = process.env.PORT || 4003;
 
 server
   .listen(port)
