@@ -20,7 +20,11 @@ const server = new ApolloServer({
     };
   },
   cors: {
-    origin: ['https://studio.apollographql.com', 'https://cdpn.io'],
+    origin: [
+      'https://studio.apollographql.com',
+      'https://cdpn.io',
+      'http://localhost:3000',
+    ],
     credentials: true,
   },
   subscriptions: {
