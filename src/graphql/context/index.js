@@ -18,10 +18,20 @@ export const context = async ({ req, res, connection }) => {
     }
   }
 
-  return {
+  const theContext = {
     loggedUserId,
     res,
   };
+
+  if (connection) {
+    const usersAPI = new UsersApi();
+    usersAPI.initialize({});
+    theContext.dataSources = {
+      usersAPI,
+    };
+  }
+
+  return theContext;
 };
 
 // MÉTODOS AUXILIARES
