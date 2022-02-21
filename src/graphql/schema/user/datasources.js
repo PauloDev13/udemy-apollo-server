@@ -16,7 +16,7 @@ export class UsersApi extends RESTDataSource {
   async getUsers(urlParams = {}) {
     return await this.get('/users', urlParams, {
       cacheOptions: {
-        ttl: 60,
+        ttl: 0,
       },
     });
   }
@@ -24,7 +24,7 @@ export class UsersApi extends RESTDataSource {
   async getUser(id) {
     return await this.get(`/users/${id}`, undefined, {
       cacheOptions: {
-        ttl: 60,
+        ttl: 0,
       },
     });
   }

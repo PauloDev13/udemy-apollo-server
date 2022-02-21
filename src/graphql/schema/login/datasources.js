@@ -84,7 +84,7 @@ export class LoginApi extends RESTDataSource {
     const found = !!user.length;
 
     if (!found) {
-      throw new AuthenticationError('Usuário inválido');
+      throw new AuthenticationError('Usuário ou senha inválido');
     }
     return user;
   }
